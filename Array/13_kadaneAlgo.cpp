@@ -3,12 +3,14 @@ using namespace std;
 
 void kadan(vector<int> arr, int n)
 {
-    int max = 0, current_max = 0;
+    int max_sum = 0, current_max = 0;
     int start = 0, end = 0, s = 0;
     for (int i = 0; i < n; i++)
     {
-
+        current_max = max(arr[i], current_max + arr[i]);
+        max_sum = max(max_sum, current_max);
     }
+    cout << max_sum;
 }
 
 int main()
